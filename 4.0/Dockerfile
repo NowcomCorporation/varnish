@@ -2,7 +2,7 @@ FROM tutum/curl
 MAINTAINER info@tutum.co
 
 ENV VERSION 4.0
-RUN echo varnishcache-varnish41-FDBCAE9C0FC6FD2E.pub.gpg | apt-key add - && \
+RUN curl -L https://packagecloud.io/varnishcache/varnish41/gpgkey | sudo apt-key add - && \
         echo "deb https://packagecloud.io/varnishcache/varnish41/ubuntu/ trusty main" >> /etc/apt/sources.list.d/varnish-cache.list && \
 	apt-get update && \
 	apt-get install -yq varnish

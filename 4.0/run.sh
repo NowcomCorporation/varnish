@@ -7,5 +7,5 @@ fi
 touch /var/log/varnish/varnishncsa.log
 exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS &
 
-(sleep 10; /etc/init.d/varnishncsa start)
+(sleep 10; service varnishncsa start)
 tail -f /var/log/varnish/varnishncsa.log

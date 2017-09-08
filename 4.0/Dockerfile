@@ -24,6 +24,9 @@ ENV CACHE file,/var/lib/varnish/varnish_storage.bin,256m
 # Memory based:
 #ENV CACHE malloc,256m
 
+# enable logging to file for Varnish
+ENV VARNISHNCSA_ENABLED 1
+
 VOLUME /var/lib/varnish
 ADD run.sh /run.sh
 CMD ["/run.sh"]

@@ -2,7 +2,7 @@ FROM tutum/curl
 MAINTAINER info@tutum.co
 
 ENV VERSION 4.0
-RUN apt-get update && apt-get install apt-transport-https && \
+RUN apt-get update && apt-get install -yq apt-transport-https && \
         echo "deb https://packagecloud.io/varnishcache/varnish41/ubuntu/ trusty main" >> /etc/apt/sources.list.d/varnish-cache.list && \
 	apt-get update && \
 	apt-get install -yq varnish

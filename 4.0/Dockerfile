@@ -37,5 +37,6 @@ ENV VARNISHNCSA_ENABLED 1
 ADD ./dashboard /var/www/dashboard/
 
 VOLUME /var/lib/varnish
+
 ADD run.sh /run.sh
 CMD ["/run.sh"]

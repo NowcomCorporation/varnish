@@ -3,8 +3,8 @@ var config = {
     name: "$DASHBOARD_TITLE",
     host: null,
     port: 6085,
-    user: false,
-    pass: false
+    user: "DASHBOARD_USER",
+    pass: "DASHBOARD_PASS"
   }],
   groups: [],
   update_freq: 2000,

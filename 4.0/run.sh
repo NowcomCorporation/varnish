@@ -5,7 +5,7 @@ if [ ! -z "$CONTENT_VCL" ]; then
 fi
 
 #varnishlog
-if [ "$ENABLE_VARNISH" == "True" ]
+if [ "$ENABLE_DASHBOARD" == "True" ]
 then
   varnish-agent -H /var/www/dashboard/ &
 fi

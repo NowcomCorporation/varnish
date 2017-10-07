@@ -34,7 +34,7 @@ ENV VARNISHNCSA_ENABLED 1
 
 # set Title for Varnish Dashboard
 ENV DASHBOARD_TITLE "Varnish Cache"
-ENV ENABLE_DASHBOARD True
+ENV ENABLE_DASHBOARD False
 
 ADD ./dashboard /var/www/dashboard/
 

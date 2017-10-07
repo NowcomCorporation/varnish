@@ -1,6 +1,7 @@
 FROM tutum/curl
 MAINTAINER info@tutum.co
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION 4.0
 RUN apt-get update && apt-get install -yq apt-transport-https ca-certificates
 RUN curl -L https://packagecloud.io/varnishcache/varnish41/gpgkey | sudo apt-key add - && \

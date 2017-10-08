@@ -7,8 +7,10 @@ fi
 # Dashboard for Varnish Agent2
 if [ "$ENABLE_DASHBOARD" == "True" ]
 then
-  exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS &
+  echo "start varnish-agent"
   varnish-agent -H -d /var/www/dashboard/
-else
-  exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS
 fi
+
+echo "Start varnishd"
+exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS
+

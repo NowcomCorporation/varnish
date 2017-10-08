@@ -8,7 +8,7 @@ fi
 if [ "$ENABLE_DASHBOARD" == "True" ]
 then
   echo "start varnish-agent"
-  varnish-agent -H -d /var/www/dashboard/
+  varnish-agent -H /var/www/dashboard/
 fi
 
 echo "Start varnishd"

@@ -4,10 +4,10 @@ if [ ! -z "$CONTENT_VCL" ]; then
 	CONTENT="-f /etc/varnish/default.vcl"
 fi
 
-#varnishlog
+exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS
+
+# Dashboard for Varnish Agent2
 if [ "$ENABLE_DASHBOARD" == "True" ]
 then
   varnish-agent -H /var/www/dashboard/ &
 fi
-
-exec /usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS

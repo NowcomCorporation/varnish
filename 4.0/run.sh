@@ -18,4 +18,4 @@ then
   varnish-agent -H /var/www/dashboard/ -c 8888 -n $VARNISH_NAME -p /etc/varnish/ -z 127.0.0.1:80 -v
 fi
 
-varnishlog
+varnishlog -n $VARNISH_NAME

@@ -9,7 +9,7 @@ fi
 #if [ "$ENABLE_DASHBOARD" == "True" ]
 #then
   echo "start varnish-agent"
-  varnish-agent -H /var/www/dashboard/ -n $VARNISH_NAME -p /etc/varnish/ -z 127.0.0.1:80 -d -v
+  varnish-agent -H /var/www/dashboard/ -n $VARNISH_NAME -p /etc/varnish/ -z 127.0.0.1:80 -v
 #fi
 
 echo "Start varnishd"

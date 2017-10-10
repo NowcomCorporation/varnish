@@ -15,7 +15,7 @@ then
   sleep 20
   
   echo "start varnish-agent"
-  varnish-agent -H /var/www/dashboard/ -c 8888 -n $VARNISH_NAME -p /etc/varnish/ -z 127.0.0.1:80 -v
+  varnish-agent -H /var/www/dashboard/ -c 8888 -n $VARNISH_NAME -p /etc/varnish/ -z 127.0.0.1:80 -d -v
 fi
 
 varnishlog -n $VARNISH_NAME

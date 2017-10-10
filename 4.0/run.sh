@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ ! -z "$CONTENT_VCL" ]; then
 	echo -e "$CONTENT_VCL" > /etc/varnish/default.vcl
 	CONTENT="-f /etc/varnish/default.vcl"
